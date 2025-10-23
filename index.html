@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mecenat App</title>
+  <!-- ✅ Add these lines below -->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="Mecenat App">
+  <link rel="apple-touch-icon" href="Icon.png">
+  <!-- ✅ End of added lines -->
+  <link rel="icon" href="Icon.png" type="image/png" />
+  <link rel="apple-touch-icon" href="Icon.png" />
+  <style>
+   body {
+      margin: 0;
+  background-image: url('background.jpg');
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: white;
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  aspect-ratio: 1206 / 2477; /* preserves correct proportions */
+    }
+
+    button {
+      padding: 16px 8px; /* smaller size */
+  background: rgba(255, 255, 255, 0.514); /* transparent blue (60% opacity) */
+  color: white;
+  border: 1px solid rgba(255, 255, 255, 0.7); /* subtle border */
+  border-radius: 8px;
+  font-size: 3px;
+  cursor: pointer;
+  transition: all 0.3s;
+      position: absolute;           /* allows manual placement */
+      bottom: 60px;                 /* distance from bottom */
+      left: 50%;                    /* center horizontally */
+      transform: translateX(-50%);  /* perfectly center the button */
+    }
+    button:hover {
+      background: rgba;
+    }
+  </style>
+</head>
+<body>
+  <button onclick="window.location.href='second.html'">Go to My Page</button>
+</body>
+</html>

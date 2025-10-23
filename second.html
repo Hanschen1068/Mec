@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Page</title>
+  <link rel="icon" href="Icon.png" type="image/png" />
+  <link rel="apple-touch-icon" href="Icon.png" />
+  <style>
+    body {
+      margin: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background-color: black;
+      position: relative; /* So video can be placed absolutely inside */
+      overflow: hidden;
+    }
+
+    img {
+      max-width: 100%;
+      max-height: 100%;
+      border-radius: 12px;
+      object-fit: contain; /* Ensures the whole image is visible */
+    }
+
+    video {
+  position: absolute;
+  top: 68%;       /* % of the container height */
+  left: 45.3%;      /* % of the container width */
+  width: 8%;     /* scale relative to screen width */
+  transform: translate(-50%, -50%); /* centers video at that point */
+}
+  </style>
+</head>
+<body>
+  <img src="HH_2026.jpg" alt="Background Image">
+  <video src="SL logo.mp4" autoplay loop muted playsinline></video>
+</body>
+</html>
