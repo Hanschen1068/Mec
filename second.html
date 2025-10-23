@@ -4,8 +4,12 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>My Page</title>
-  <link rel="icon" href="Icon.png" type="image/png" />
-  <link rel="apple-touch-icon" href="Icon.png" />
+
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <meta name="apple-mobile-web-app-title" content="Mecenat App">
+  <link rel="apple-touch-icon" href="Icon.png">
+  <link rel="manifest" href="manifest.json">
   <style>
     body {
       margin: 0;
@@ -27,10 +31,12 @@
 
     video {
   position: absolute;
-  top: 68%;       /* % of the container height */
-  left: 45.3%;      /* % of the container width */
-  width: 8%;     /* scale relative to screen width */
-  transform: translate(-50%, -50%); /* centers video at that point */
+  top: 68vh;          /* relative to viewport height */
+  left: 41vw;         /* relative to viewport width */
+  width: 18vw;        /* scale relative to screen width */
+  max-width: 150px;   /* prevents it from getting too large */
+  transform: translate(-50%, -50%);
+  border-radius: 12px;
 }
   </style>
 </head>
