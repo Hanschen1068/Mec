@@ -3,14 +3,13 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>My Page</title>
+  <title>Mecenat App</title>
 
-  <!-- PWA settings -->
+  <!-- iPhone fullscreen settings (optional, harmless for GitHub Pages) -->
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="default">
   <meta name="apple-mobile-web-app-title" content="Mecenat App">
   <link rel="apple-touch-icon" href="Icon.png">
-  <link rel="manifest" href="manifest.json">
 
   <style>
     body {
@@ -55,15 +54,14 @@
     webkit-playsinline
   ></video>
 
-  <!-- 👇 Move your script here, inside body and after video -->
   <script>
+    // Optional: Debug video loading on Safari/iPhone
     const video = document.querySelector("video");
     video.addEventListener("error", () => {
-      console.error("Video failed to load", video.error);
+      console.error("⚠️ Video failed to load", video.error);
     });
     video.addEventListener("loadeddata", () => {
       console.log("✅ Video loaded successfully");
     });
   </script>
 </body>
-</html>
