@@ -5,11 +5,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>My Page</title>
 
+  <!-- PWA settings -->
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="default">
   <meta name="apple-mobile-web-app-title" content="Mecenat App">
   <link rel="apple-touch-icon" href="Icon.png">
   <link rel="manifest" href="manifest.json">
+
   <style>
     body {
       margin: 0;
@@ -18,7 +20,7 @@
       align-items: center;
       height: 100vh;
       background-color: black;
-      position: relative; /* So video can be placed absolutely inside */
+      position: relative;
       overflow: hidden;
     }
 
@@ -26,27 +28,42 @@
       max-width: 100%;
       max-height: 100%;
       border-radius: 12px;
-      object-fit: contain; /* Ensures the whole image is visible */
+      object-fit: contain;
     }
 
     video {
-  position: absolute;
-  top: 68vh;          /* relative to viewport height */
-  left: 31vw;         /* relative to viewport width */
-  width: 32vw;        /* scale relative to screen width */
-  max-width: 150px;   /* prevents it from getting too large */
-  transform: translate(-50%, -50%);
-  border-radius: 12px;
-}
+      position: absolute;
+      top: 68vh;          /* relative to viewport height */
+      left: 31vw;         /* relative to viewport width */
+      width: 32vw;        /* scale relative to screen width */
+      max-width: 150px;   /* prevents it from getting too large */
+      transform: translate(-50%, -50%);
+      border-radius: 12px;
+    }
   </style>
 </head>
+
 <body>
   <img src="HH_2026.jpg" alt="Background Image">
-  <video src="SL logo.mp4" autoplay loop muted playsinline></video>
+  <video
+    src="sl_logo.mp4"
+    autoplay
+    playsinline
+    muted
+    loop
+    preload="auto"
+    webkit-playsinline
+  ></video>
+
+  <!-- 👇 Move your script here, inside body and after video -->
+  <script>
+    const video = document.querySelector("video");
+    video.addEventListener("error", () => {
+      console.error("Video failed to load", video.error);
+    });
+    video.addEventListener("loadeddata", () => {
+      console.log("✅ Video loaded successfully");
+    });
+  </script>
 </body>
 </html>
-
-
-
-
-
